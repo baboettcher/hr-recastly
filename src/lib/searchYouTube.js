@@ -8,6 +8,7 @@ var searchYouTube = (options, callback) => {
     videoEmbeddable : true
 
   }
+
   $.ajax({
   url: 'https://www.googleapis.com/youtube/v3/search',
   type: 'GET',

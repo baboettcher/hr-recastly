@@ -1,6 +1,7 @@
 var Search = (props) => {
   var changeHandler = (event) => {
     // console.log(event.nativeEvent.target.value);
+    event.persist();
     props.onSearchBarEntry(event.nativeEvent.target.value)
   }
   return <div className="search-bar form-inline">
