@@ -5,22 +5,22 @@ var searchYouTube = (options, callback) => {
     maxResults: options.max,
     key: options.key,
     type: 'video',
-    videoEmbeddable : true
+    videoEmbeddable: true
 
-  }
+  };
 
   $.ajax({
-  url: 'https://www.googleapis.com/youtube/v3/search',
-  type: 'GET',
-  data: youTubeData,
-  contentType: 'application/json',
-  success: function (data) {
-    callback(data.items); //array of songs
-  },
-  error: function (data) {
-    console.error('error', data);
-  }
-});
+    url: 'https://www.googleapis.com/youtube/v3/search',
+    type: 'GET',
+    data: youTubeData,
+    contentType: 'application/json',
+    success: function (data) {
+      callback(data.items); //array of songs
+    },
+    error: function (data) {
+      console.error('error', data);
+    }
+  });
 };
 
 window.searchYouTube = searchYouTube;
