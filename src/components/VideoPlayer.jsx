@@ -2,12 +2,13 @@ var VideoPlayer = (props) => {
   var videoId;
   var videoTitle;
   var videoDescription;
-
+//sdfsd
   if(props.video.id === undefined) {
     videoId = "";
     videoTitle = "";
     videoDescription = "";
   } else {
+    // break apart video for easier to read templating
     videoId = props.video.id.videoId;
     videoTitle = props.video.snippet.title;
     videoDescription = props.video.snippet.description;
